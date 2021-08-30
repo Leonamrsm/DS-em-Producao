@@ -25,3 +25,12 @@ Mapa Mental de Hipóteses é constituido de:
 Antes de dfinir as hipóteses devemos criar o mapa mental de hipóteses
 	- Utilizar o coogle para criar o mapa de hipóteses
 
+Como escrever as hipóteses?
+
+* Hipóteses são apostas
+	- Lojas de MAIOR porte... deveriam vender MAIS - Fenomeno de correlação não de causa e efeito
+	- Lojas de MAIOR sortimento... deveriam vender MAIS 
+	- Lojas com MAIS competidores por perto... deveriam vender menos
+	
+Como prioriar as hipóteses?
+	1. Você possui os dados da hipótese agora?
