@@ -1,0 +1,19 @@
+4 Tópicos para Entender os Problemas de DS
+
+* ENTENDER: A Motivação
+	- Qual o contexto?
+	
+* Entender: A Causa Raiz do problema
+	- Porque fazer uma Previsão de Vendas?
+	
+* Entender: Quem é o Dono do Problemas
+	- Quem são os Stakeholders?
+	
+* Entender: O Formato da Solução
+	- Qual o formato da solução?
+		- Granularidade
+		- Tipo de Problemas
+		- Potenciais Métodos
+		- Formato da Entrega
+		
+		

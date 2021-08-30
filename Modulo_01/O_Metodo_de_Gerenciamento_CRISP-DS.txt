@@ -1,0 +1,40 @@
+O Ciclo CRISP-DS
+
+* 1 Ciclo CRISP Completo:
+	- 1 Versão End-to_end da Solução
+	- Velocidade na Entrega de Valor
+	- mapeamento de todos os possíveis problemas
+
+* Etapas do Ciclo CRISP
+
+	1. Questão de Negócio
+	2. Entendimento do Negócio
+	3. Coleta dos Dados
+	4. Limpeza dos Dados
+	5. Exploração dos Dados
+		* Entender quais variáveis que influenciam no fenômeno avaliado (preço, vendas, classificação, etc)
+	6. Modelagem dos Dados	
+		* Separar dados para treino e teste, encoding de variáveis categóricas, transformações sobre os dados
+	7. Algoritmos de ML
+	8. Avaliação do Algoritmo
+	9. Modelo em Produção -> caso a acurácia seja satisfatória
+	
+* O CRISP_DS para o Desafio de Rossmann
+
+	1. Questão de Negócio
+		Qual é o valor das vendas de cada loja nas próximas 6 semanas?
+	2. Entendimento do Negócio
+		* Qual a motivação?
+			- A previsão de vendas foi requisitada pelo CFO em uma reunião sobre os resultados das lojas
+		* Qual a Causa Raiz do Problema?
+			- Dificuldade em determinar o valor de investimento para Reformas de cada Loja.
+		* Quem é o dono do problema?
+			- Diretor Financeiro (CFO) da Rossmann
+		* Qual o formato da solução?
+			- Granularidade: Previsão de Vendas por Dia da Loja para os próximos 42 dias, 6 semanas
+			- Tipo do Problema: previsão de Vendas
+			- Potenciais Métodos: Séries Temporais ou regressão
+			- Formato da Entrega: 
+				1) O valor total de vendas de cada loja no final da sexta semana
+				2) Poder checar as vendas por celular
+
