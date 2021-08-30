@@ -1,0 +1,27 @@
+A motivação de Feature Engineering?
+	- Ter as variáveis DISPONÍVEIS para ESTUDO durante a análise exploratória dos Dados
+	
+Etapas Exploração de Dados:
+	1. Criar novas variáveis;
+	2. Criar lista de hipoteses
+	3. Validar a lista de hipóteses
+	
+Mapa Mental de Hipóteses é constituido de:
+
+* Fenomeno
+	- Qual o fenômeno que estou modelando?
+	
+* Agentes
+	- Quem são os agentes atuam sobre o fenômeno de interesse
+	
+* Atributos do Agentes
+	- Qual a descrição dos Agentes?
+	
+* Lista de Hipóteses:
+	- Hipóteses para validar com os Dados
+	- Cada hipótese validada ou descartada é chamada de insight
+		- Insights são contrutivos quando geram surpresa ou contrapõem crenças constituídas
+		
+Antes de dfinir as hipóteses devemos criar o mapa mental de hipóteses
+	- Utilizar o coogle para criar o mapa de hipóteses
+
