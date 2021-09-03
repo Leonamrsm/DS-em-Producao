@@ -34,3 +34,17 @@ Como escrever as hipóteses?
 	
 Como prioriar as hipóteses?
 	1. Você possui os dados da hipótese agora?
+	
+
+===============================================================================================================
+	
+Fitantro Variáveis
+	Deve-se filtrar por restrições de negócio
+	
+Filtrando Variáveis X Seleção de Variáveis
+
+* Filtragem de Variáveis
+	- Restrições de Acordo com o Negócio.
+	
+* Seleção de Variáveis
+	- Variáveis mais relevantes para o modelo
