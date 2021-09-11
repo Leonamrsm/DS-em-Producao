@@ -1,0 +1,42 @@
+Por que fazer a preparação dos dados?
+
+O aprendizado da maioria dos algoritmos de ML é facilitado com dados numéricos, na mesma escala, diminuindo o vies dos modelos.
+
+Como preparar os dados?
+
+* Normalização -> funciona muito bem para variáveis que possuem uma distribuição normal
+	* Rescala o centro para 0 com desvio padrão igual a 1
+	
+* Rescaling: -> funciona muito bem para variáveis que não possuem uma distribuição normal
+	* Rescala para o intervalo entre 0 e 1
+	* Distribuições não Gaussianas
+
+* Transformação
+	* Transformação de features Categóricas para Numéricas (Encoding)
+	* Transformações de Natureza
+	
+============================================================================================================
+
+NORMALIZAÇÃO
+
+x_new = (x_i - mu) /sigma
+
+mu = media
+sigma = desvio padrão
+
+============================================================================================================
+
+Min-Max Scaler
+
+x_new = (x_i - mu) / (x_max - x_min)
+
+mu = media
+
+Obs.: muito sensível a outliers, assim utiliza-se o Robust Scaler
+
+x_new = (x_i - Q_1(x)) / (Q_3(x) - Q_1(x))
+
+Q_1(x) = 1º Quartil
+Q_3(x) = 3º Quartil
+
+Q_3(x) - Q_1(x) = IQR (Interquatile range)
