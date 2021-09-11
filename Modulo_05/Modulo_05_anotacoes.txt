@@ -40,3 +40,25 @@ Q_1(x) = 1º Quartil
 Q_3(x) = 3º Quartil
 
 Q_3(x) - Q_1(x) = IQR (Interquatile range)
+
+====================================================================================================================
+
+Encoding
+
+1. One Hot Encoding
+	Benefícios: super simples de se utilizar
+	Desvantagem: Cria-se muitas novas colunas no conjunto de dados, podendo fazer com que ocorra sobreajuste do modelo
+
+2. label Encoding
+	Funciona bem com variáveis que não possuem uma realção explicita ou um certo sequenciamento, como níveis de temperatura
+
+3. Ordinal Encoding
+	Parecido com o label, mas define-se uma ordem
+	
+4. Target Encoding or Mean Encoding
+	Funciona muito bem quando há mais de 100 níveis de variáveis categóricas.	
+	
+5. Frequency Encoding
+
+6. Embedding Encoding
+	Muito usado em NLP
