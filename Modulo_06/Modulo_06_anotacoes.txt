@@ -1,0 +1,50 @@
+Como selecionar as variáveis mais importantes para o modelo?
+
+"A explicação mais simples sobre um fenômeno observado, deveria prevalecer sobre explicações mais complexas" (Occam's Razor)
+
+
+Modelos mais simples generalizam melhor a partir de conjuntos de dados mais simples.
+
+Para tornar o conjunto de dados mais simples deve-se remover variáveis colineares
+
+
+============================================================================================================
+
+Tipos de Seleções de variáveis
+
+1. Seleção Univariada (Filter Methods)
+
+	* Encontrar quais variáveis explicam melhor o fenômeno observado -> Coeficiente de correlação
+
+	Vantagens:
+		1. Método Simples;
+		2. Método Rápido
+		3. Fácil Entendimento
+
+	Desvantagens:
+		1. Não considera a influência entre as variáveis
+
+	Pra fazer análise exploratória dos dados  é bom, mas pra seleção de variáveis existem tecnicas mais eficientes
+
+2. Seleção por importância (Embedded Methods)
+	O método de seleção é um subproduto do proprio aprendizado de um algoritmo (modelo)
+
+	1. Random Forest 
+
+		Escolher variáveis que separa o conjunto de dados de forma homogênea. Gini Impurity - entropia
+
+	2. Lasso Regression
+	3. Ridge Regression
+
+3. Seleção por SubSet (Wrapper Methods)
+
+Passos: 
+	Até percorrer todas as variáveis: 
+		->Selecione uma única variável 
+		-> Treine um modelo de ML 
+		-> Calcule a performance do Modelo
+			-> 	A performance aumentou?
+				* Sim -> Mantém a variável, adiciona-se uma outra variável e repete-se os Passos
+				* Não -> Remove a variável e repete-se os Passos
+
+Algortitmo que realiza esses passos chama-se Boruta
