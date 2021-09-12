@@ -64,5 +64,17 @@ Encoding
 	Muito usado em NLP
 	
 ====================================================================================================================
+TRANFORMAÇÃO DE NATUREZA
+
+1. Logrithm Transformation
+
+2. Box-Cox Transformation
+
+3. Cube-Root Transformation
+
+4. Square-Root Transformation
+
+5. Sine and Cosine Transformation
+
 
 
