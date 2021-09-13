@@ -1,0 +1,19 @@
+A motivação dos modelos de Machine Learning
+
+Objetivo: aprender o comportamento do modelo de vendas com as variáveis dispiníveis e então generalizá-lo para o futuro.
+
+1. Modelo de Média (Average Model)
+	- Objetivo não é resolver o problema de ML, mas sim servir como uma base comparativa para a performance dos outros modelos
+
+2. Linear Regression
+
+3. Linear Regression Regularized
+	- possui um parâmetro a mais realizando a regularização lasso and ridge (L1 and L2 regularization)
+
+Princípio de Occam's Razor 	- Utiliza-se algoritmos mais simples primeiro
+
+- Modelo não lineares
+
+4. Random Forest Regressor
+
+5. XGBoost Regressor
