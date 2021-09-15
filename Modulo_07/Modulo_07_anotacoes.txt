@@ -17,3 +17,9 @@ Princípio de Occam's Razor 	- Utiliza-se algoritmos mais simples primeiro
 4. Random Forest Regressor
 
 5. XGBoost Regressor
+
+=============================================================================================================
+
+Time Series Cross-Validation
+
+Deve-se manter a ordem cronológica dos dados
