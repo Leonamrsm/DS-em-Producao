@@ -1,0 +1,46 @@
+Performance em Data Science
+
+1. MAE (Mean Absolute error)
+
+MAE = (1/N)sum|y - yhat|
+
+	* Atribui peso igual para todos os erros;
+	* Robusto na presença de Outliers;
+	* Fácil Entendimento para o time de Negócio.
+
+2. 	MAPE (Mean Absolute Percentage Error)
+
+MAPE = (100/N)sum|(y - yhat)/y|
+
+	* Mostra o quão longe a predição está do valor real, na média, em porcentagem
+	* Muito usado na divulgação de resultados
+	* Não pode ser usado se a variável resposta contém 0
+
+3. RMSE (Root Mean Square Error)
+
+RMSE = sqrt((1/N)sum(y - yhat)^2)
+
+	* Atribui MAIOR PESO a erros MAIORES
+	* Sensível à presença de Outliers
+	* Ideal para MEDIR a Performance de Modelos de ML
+
+4. MPE  (Mean Percentage Error)
+
+MPE = (1/N)sum[(y - yhat)/y]
+
+	* Não pode ser usado para medir a performance do modelo
+	* Útil para entender se o modelo está SUBESTIMANDO OU SUPERESTIMANDO
+	* Não pode ser usado se a variável resposta contém 0
+
+
+1. Performance do Modelo de Regressão
+	RMSE e MPE
+		-> Métricas para melhoria de Performance do Modelo
+
+2. Performance do Modelo sobre o Negócio
+	MAE, MAPE e MPE
+
+=====================================================================================
+1. Performance do Modelo de Regressão
+
+	a. 
