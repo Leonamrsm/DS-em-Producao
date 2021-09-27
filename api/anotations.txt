@@ -1,0 +1,13 @@
+Generate requirements.txt -> pip list --format=freeze > requirements.txt
+Generate Procfile -> web: python handler.py
+
+Install Heroku
+
+    git init
+    heroku login
+    git status
+    git add .
+    git commit -m 'comment'
+    git push heroku master
+    heroku apps: create rossmann-prediction
+    git push heroku master
