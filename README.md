@@ -33,8 +33,12 @@ In order to solve this challenge, the work went along the following steps:
 
 ## Top 3 Insights From Exploratory Data Analysis
 
+Eleven hypotheses were validated in the exploratory data analysis. Of these, the 3 most relevant hypotheses were:
+
 - **Hypothesis 1:** stores with greater assortment have a bigger income.  
    ***True:*** among the 3 possible assortments for each unit, those in the 'extra' category sell more in average than those in 'extended', which, by its turn, sell more in average than those in 'basic'.
+
+![](img/H1.png)
 
 - **Hypothesis 2:** stores that extend promotions have a bigger income.  
    ***False:*** in average, stores that joined the continuing consecutive promotion performed worse than before.
