@@ -40,11 +40,15 @@ Eleven hypotheses were validated in the exploratory data analysis. Of these, the
 
 ![](img/H1.png)
 
-- **Hypothesis 2:** stores that extend promotions have a bigger income.  
-   ***False:*** in average, stores that joined the continuing consecutive promotion performed worse than before.
-
-- **Hypothesis 3:** stores perform better in terms of sales after the 10th day of each month.  
+- **Hypothesis 2:** stores perform better in terms of sales after the 10th day of each month.  
    ***False:*** the average performance is better for the first 10 days of the month.
+
+![](img/H10.png)
+
+- **Hypothesis 3:** stores should sell less during school holidays.
+   ***True:*** in average, Stores sell more on school holidays.
+
+![](img/H12.png)
 
 ## Machine Learning Modeling Performance
 
