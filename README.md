@@ -2,7 +2,7 @@
 
 ## Predicting the income of the units of a chain store
 
-![](cover.png)
+![](img/cover.png)
 
 ## Business Problem
 
