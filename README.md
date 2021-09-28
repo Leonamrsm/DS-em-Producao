@@ -12,13 +12,12 @@ Store managers were tasked with predicting their daily sales for up to six weeks
 
 The [database](https://www.kaggle.com/c/rossmann-store-sales) spans around 2.5 years in time (between 2013 and 2015) and 1115 stores in total.
 
-
-![](img/crisp_cycle.png)
-
-
 ## Solution Strategy
 
 The resolution of the challenge was carried out following the CRISP (CRoss-Industry Standard Process for data mining) methodology, which is a cyclical approach that streamlines the delivery of value.
+
+![](img/crisp_cycle.png)
+
 
 In order to solve this challenge, the work went along the following steps:
 1. **Data Description:** understanding of the status of the database and dealing with missing values properly. Basic statistics metrics furnish an overview of the data.  
@@ -31,8 +30,6 @@ In order to solve this challenge, the work went along the following steps:
 8. **Hyperparameter Fine Tuning:** search for the best values for each of the parameters of the best performing model(s) selected from the previous step.
 9. **Translation and Interpretation of the Model Performance:** conversion of the performance metrics of the Machine Learning model to a more tangible business result.
 10. **Deployment of Model to Production:** publication of the model in a cloud environment so that the interested people can access its results to improve business decisions.
-
-Moreover, the workflow followed the [CRISP-DM](https://www.datascience-pm.com/crisp-dm-2/) methodology, aiming to work in the problem through successively deeper cycles, while delivering value early, since the first run. 
 
 ## Top 3 Insights From Exploratory Data Analysis
 
