@@ -9,5 +9,5 @@ Install Heroku
     git add .
     git commit -m 'comment'
     git push heroku master
-    heroku apps: create rossmann-prediction
+    heroku apps:create rossmann-prediction
     git push heroku master
