@@ -6,17 +6,15 @@
 
 ## Business Problem
 
-Rossmann is one of the largest chains of drug stores in Europe, with [+4k stores as of 2019](https://www.retail-index.com/sectors/personalcareretailersineurope.aspx). Its business model is that of a common pharmacy, but with several standardized units spread throughout the continent.
+Rossmann is one of the largest drug store chains in Europe with around 56,200 employees and more than 4000 stores.[1](https://www.retail-index.com/sectors/personalcareretailersineurope.aspx) In 2019 Rossmann had more than €10 billion turnover in Germany, Poland, Hungary, the Czech Republic, Turkey, Albania, Kosovo and Spain. 
 
-The manager of each store came up with the task of predicting the daily sales of their units for up to 6 weeks in advance. This task was assigned to the Data Science team of the whole chain, who must model the historical database in order to generate the desired forecasting. 
+Store managers were tasked with predicting their daily sales for up to six weeks in advance. It is believed that sales are influenced by many factors, including promotions, competition, school and state holidays, seasonality, and locality. This task was assigned to the Data Science team of the whole chain, who must model the historical database in order to generate the desired forecasting. 
 
-The [database](https://www.kaggle.com/c/rossmann-store-sales) spans around 2.5 years in time (between 2013 and 2015) and 1115 stores in total, containing information for each unit describing factors such as promotions, competition, school and state holidays and seasonality.
-
-## Business Assumptions
-
-- The whole analysis is understood to be done on the week after the last record in the database.
+The [database](https://www.kaggle.com/c/rossmann-store-sales) spans around 2.5 years in time (between 2013 and 2015) and 1115 stores in total.
 
 ## Solution Strategy
+
+The resolution of the challenge was carried out following the CRISP (CRoss-Industry Standard Process for data mining) methodology, which is a cyclical approach that streamlines the delivery of value.
 
 In order to solve this challenge, the work went along the following steps:
 1. **Data Description:** understanding of the status of the database and dealing with missing values properly. Basic statistics metrics furnish an overview of the data.  
