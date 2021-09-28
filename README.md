@@ -12,6 +12,10 @@ Store managers were tasked with predicting their daily sales for up to six weeks
 
 The [database](https://www.kaggle.com/c/rossmann-store-sales) spans around 2.5 years in time (between 2013 and 2015) and 1115 stores in total.
 
+
+![](img/crisp_cycle.png)
+
+
 ## Solution Strategy
 
 The resolution of the challenge was carried out following the CRISP (CRoss-Industry Standard Process for data mining) methodology, which is a cyclical approach that streamlines the delivery of value.
