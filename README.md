@@ -50,7 +50,10 @@ Eleven hypotheses were validated in the exploratory data analysis. Of these, the
 
 ![](img/H12.png)
 
+
 ## Machine Learning Modeling Performance
+
+Four different models (linear regression, regularized linear regression - lasso, random forest and XGBoost) were evaluated using cross-validation as per the data below.
 
 The final chosen algorithm was the XGBoost Regressor, which presented the following performance after the appropriate hyperparameter fine tuning, on K-fold cross-validation with 5 splits:  
 
