@@ -36,16 +36,19 @@ In order to solve this challenge, the work went along the following steps:
 Eleven hypotheses were validated in the exploratory data analysis. Of these, the 3 most relevant hypotheses were:
 
 - **Hypothesis 1:** stores with greater assortment have a bigger income.  
+- 
    ***True:*** among the 3 possible assortments for each unit, those in the 'extra' category sell more in average than those in 'extended', which, by its turn, sell more in average than those in 'basic'.
 
 ![](img/H1.png)
 
 - **Hypothesis 2:** stores perform better in terms of sales after the 10th day of each month.  
+- 
    ***False:*** the average performance is better for the first 10 days of the month.
 
 ![](img/H10.png)
 
 - **Hypothesis 3:** stores should sell less during school holidays.
+- 
    ***True:*** in average, Stores sell more on school holidays.
 
 ![](img/H12.png)
@@ -98,7 +101,7 @@ Finally, with the model trained, it's time to translate model performance into b
 Below is the performance of 5 randomly sampled stores, showing the total sales prediction for the next 6 weeks:
 
 |store | predictions| worst scneario| best scenario|MAE|MAPE|
-|-----------------------------|------------------|-------------|------------------|
+|------------------------|----------|-----------|--------|------|
 |573         |324,304,34 |320,451,50| 322,157,19| 852,84 | 0,08 |
 
 Being worst_scenario = prediction - MAE and best_scenario = prediction + MAE
