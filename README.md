@@ -100,8 +100,8 @@ Finally, with the model trained, it's time to translate model performance into b
 
 Below is the performance of 5 randomly sampled stores, showing the total sales prediction for the next 6 weeks:
 
-|store | predictions| worst scneario| best scenario|MAE|MAPE|
-|------------------------|----------|-----------|--------|------|
+|store       | predictions| worst scneario| best scenario|MAE|MAPE|
+|------------|-----------|----------|-----------|--------|------|
 |573         |324,304,34 |320,451,50| 322,157,19| 852,84 | 0,08 |
 
 Being worst_scenario = prediction - MAE and best_scenario = prediction + MAE
