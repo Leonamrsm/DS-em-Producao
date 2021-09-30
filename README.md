@@ -103,6 +103,10 @@ Below is the performance of 5 randomly sampled stores, showing the total sales p
 |store       | predictions| worst scneario| best scenario|MAE|MAPE|
 |------------|-----------|----------|-----------|--------|------|
 |573         |324,304,34 |320,451,50| 322,157,19| 852,84 | 0,08 |
+|863         |163,751.41	|163,430.16	|164,072.65	|321.24	|0.07|
+|811         |226,083.36	|225,222.91	|226,943.81	|860.45	|0.18|
+|178         |277,968.44	|277,191.01	|278,745.87	|777.43	|0.11|
+|289         |411,175.59	|410,125.14	|412,226.05	|1,050.46	|0.08|
 
 Being worst_scenario = prediction - MAE and best_scenario = prediction + MAE
 
