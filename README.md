@@ -36,16 +36,19 @@ In order to solve this challenge, the work went along the following steps:
 Eleven hypotheses were validated in the exploratory data analysis. Of these, the 3 most relevant hypotheses were:
 
 - **Hypothesis 1:** stores with greater assortment have a bigger income.  
+- 
    ***True:*** among the 3 possible assortments for each unit, those in the 'extra' category sell more in average than those in 'extended', which, by its turn, sell more in average than those in 'basic'.
 
 ![](img/H1.png)
 
 - **Hypothesis 2:** stores perform better in terms of sales after the 10th day of each month.  
+- 
    ***False:*** the average performance is better for the first 10 days of the month.
 
 ![](img/H10.png)
 
 - **Hypothesis 3:** stores should sell less during school holidays.
+- 
    ***True:*** in average, Stores sell more on school holidays.
 
 ![](img/H12.png)
@@ -53,26 +56,69 @@ Eleven hypotheses were validated in the exploratory data analysis. Of these, the
 
 ## Machine Learning Modeling Performance
 
-Four different models (linear regression, regularized linear regression - lasso, random forest and XGBoost) were evaluated using cross-validation as per the data below.
+As the data varies over time, and the objective is to forecast sales in the next 6 weeks, time series cross validation was applied as shown in the image below.
 
-The final chosen algorithm was the XGBoost Regressor, which presented the following performance after the appropriate hyperparameter fine tuning, on K-fold cross-validation with 5 splits:  
+![](img/ts_cross_validation.png)
 
-| Model Name | Mean Absolute Error | Mean Absolute Percentage Error | Root Mean Squared Error |
-| ---- | :----: | :----: | :----: |
-| XGBoost Regressor (tuned HP) | 817.73 &pm; 115.51 | 0.12 &pm; 0.01 | 1183.78 &pm; 168.70 |
+In time series cross-validation, a reduced portion of the training database is separated in each iteration, where a final period is set aside for validation. In order to forecast sales for the next 6 weeks, at each new iteration of cross validation, the last 6 weeks of the training set have been separated for validation. The cross-validation performance was the average of each of these iterations.
 
-For completeness, we also include the performances of the remaining employed algorithms ("HP" stands for "hyperparameters"):
+Four different models (linear regression, regularized linear regression - lasso, random forest and XGBoost Regressor) were evaluated using cross-validation. 
 
-| Model Name | Mean Absolute Error | Mean Absolute Percentage Error | Root Mean Squared Error |
-| ---- | :----: | :----: | :----: |
-| Random Forest Regressor (tuned HP) | 857.67 &pm; 243.49 | 0.12 &pm; 0.03| 1269.48 &pm; 351.13 |
-| Random Forest Regressor|	861.30 &pm; 246.09	| 0.12 &pm; 0.03 | 1274.63 &pm; 354.57 |
-| XGBoost Regressor	| 1035.44 &pm; 194.91	| 0.14 &pm; 0.02 | 1488.23 &pm; 266.80 |
-| Average Model | 1610.93 &pm; 423.44	| 0.22 &pm; 0.03 | 2148.18 &pm; 557.91 |
-| Simple Linear Regression | 2098.69 &pm; 323.81 | 0.30 &pm; 0.02 | 2989.41 &pm; 505.97 |
-| Lasso Linear Regression |	2129.78 &pm; 369.49 | 0.30 &pm; 0.01 | 3069.62 &pm; 550.58 |
+Were used 5 folds to perform the cross validation.The results in terms of Mean Absolute Error (MAE), Mean absolute percentage error (MAPE) and Root Mean Square Error (RMSE), were:
 
-## Business Results	
+|Model|MAE|MAPE|RMSE|
+|-----------------------------|------------------|-------------|------------------|
+|Random forest regressor      |837.80 +/- 214.98 |0.12 +/- 0.02|1256.26 +/- 310.60|
+|Linear regression            |2078.09 +/- 295.43|0.3 +/- 0.02 |2946.66 +/- 468.06|
+|Lasso                        |2117.99 +/- 342.74|0.29 +/- 0.01|3058.17 +/- 506.07|
+|XGBoost regressor            |7049.73 +/- 589.3 |0.95 +/- 0.0 |7718.99 +/- 689.76|
+
+	
+Despite having the worst results, the XGB Regressor was chosen to continue the project, as it is a model that has been showing excellent results in several data science competitions and is lighter than the Random Forest Regressor, and can be more easily published in production. 
+
+## Hyperparameter Tuning
+
+Using the random search precedure, with different values for the parameters "n_estimators", "eta", "max_depth", "subsample", "colsample_bytree" and "min_child_weight", 10 different iterations of XGBoost were performed, all evaluated using cross-validation. The values of MAE, MAPE and RMSE are detailed in the notebook for all the iterations.
+
+The performance of the chosen model was:
+
+|Model|MAE|MAPE|RMSE|
+|-----------------------------|------------------|-------------|------------------|
+|XGBoost regressor            |770.787           |0.116        |1110.18|
+
+
+And then the model was trained with the entire training data. The performance on the test data was:
+
+
+|Model|MAE|MAPE|RMSE|
+|-----------------------------|------------------|-------------|------------------|
+|XGBoost regressor            |826.29 +/- 99,62  |0.11 +/- 0.01|1200.79 +/- 172.27|
+
+## Business Perfromance	
+
+Finally, with the model trained, it's time to translate model performance into business performance. Considering the MAE obtained in the forecast for each store, during the test period, the best and worst sales scenarios for each store were projected.
+
+Below is the performance of 5 randomly sampled stores, showing the total sales prediction for the next 6 weeks:
+
+|store       | predictions| worst scneario| best scenario|MAE|MAPE|
+|------------|-----------|----------|-----------|--------|------|
+|573         |324,304,34 |320,451,50| 322,157,19| 852,84 | 0,08 |
+|863         |163,751.41	|163,430.16	|164,072.65	|321.24	|0.07|
+|811         |226,083.36	|225,222.91	|226,943.81	|860.45	|0.18|
+|178         |277,968.44	|277,191.01	|278,745.87	|777.43	|0.11|
+|289         |411,175.59	|410,125.14	|412,226.05	|1,050.46	|0.08|
+
+Being **worst scenario** = prediction - MAE and **best scenario** = prediction + MAE
+
+### Total Performance
+
+By adding the sales forecasts for all stores for the next 6 weeks, the following results were obtained:
+
+| Scenario| Values|
+|---------|-------|
+|predictions| 286,746,880.00|
+|worst scenarion| 286,746,880.00|
+|best scenario  | 287,609,874.99|
 
 **Day-wise**, the predictions generated by the final model exhibited mean absolute errors
 
