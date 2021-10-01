@@ -18,7 +18,10 @@ TOKEN = '2034595644:AAHC7e2Q2xhIditFlr65rbxoaQKYafpZBVs'
 # https://api.telegram.org/bot2034595644:AAHC7e2Q2xhIditFlr65rbxoaQKYafpZBVs/sendMessage?chat_id=1049927447&text=Hi Leonam, I am doing good, tks!
 
 # # Webhook
-# https://api.telegram.org/bot2034595644:AAHC7e2Q2xhIditFlr65rbxoaQKYafpZBVs/setWebhook?url=https://cfa117f02d11c6.localhost.run
+# https://api.telegram.org/bot2034595644:AAHC7e2Q2xhIditFlr65rbxoaQKYafpZBVs/setWebhook?url=https://04e28f8e4b9113.localhost.run
+
+# # DELETE Webhook
+# https://api.telegram.org/bot2034595644:AAHC7e2Q2xhIditFlr65rbxoaQKYafpZBVs/deleteWebhook
 
 def send_message( chat_id, text):
 
@@ -78,10 +81,12 @@ def parse_message(message):
 
     store_id = store_id.replace('/', '')
 
-    try:
-        store_id = int(store_id)
-    except ValueError:
-        store_id = 'error'
+    if store_id != 'start':
+
+        try:
+            store_id = int(store_id)
+        except ValueError:
+            store_id = 'error'
 
     return chat_id, store_id
 
@@ -95,7 +100,7 @@ def index():
         message = request.get_json()
         chat_id, store_id = parse_message( message )
         
-        if store_id != 'error':
+        if (store_id != 'error') & (store_id != 'start'):
             # loading data
             data = load_dataset(store_id)
             
@@ -115,6 +120,9 @@ def index():
 
             else:
                 send_message(chat_id, 'Store Not Found')
+
+        elif store_id == 'start':
+            send_message(chat_id, 'Hello, enter the number of the store you would like to forecast sales for the next 6 weeks.')
         else:
             send_message(chat_id, 'Store ID is Wrong')
     else:
