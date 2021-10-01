@@ -141,9 +141,8 @@ A demonstration of the app:
 
 ![](img/rossmann_bot.gif)
 
-To access the bot via telegram, click on the link below:
+To access the bot via telegram, click on the icon below:
 
-http://t.me/leonam_RossmanBot
-
+[<img alt="Telegram" src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"/>](http://t.me/leonam_RossmanBot)
 
 Notice that the bot might be idle most of the time, so be patient on your request (it should not take more than 1 minute to have a response).
