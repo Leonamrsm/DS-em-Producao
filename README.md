@@ -125,8 +125,7 @@ By adding the sales forecasts for all stores for the next 6 weeks, the following
 
 ![](img/overall_performance.png)
 
-In the end, the model had an average percentage error of 11%. If 11% error is not acceptable, it is possible to improve it; following the CRISP methodology, if a new round is needed, it may be considered to train stores individually or even a smaller group of them, for example. Another possibility is to perform fine tuning for more iterations. And finally, other models could be used such as recurrent neural networks, such as LSTM.
-
+In the end, the model had an average percentage error of 11%. If 11% error is not acceptable, it is possible to improve it following the CRISP methodology. It may be considered to train stores individually or even a smaller group of them, for example. Another possibility is to perform fine tuning for more iterations. And finally, other models could be used such as recurrent neural networks.
 ## Model in production
 
 The model was finally put into production and operated via a Telegram chatbot. For this, in addition to the final trained model, a class in python was created with the entire data processing pipeline, an API handler and an application to manage the messages. All files were hosted on Heroku (https://www.heroku.com/); the production data was also stored in its cloud.
@@ -136,6 +135,13 @@ The following scheme represents all these files.
 
 ![](img/app_scheme.png)
 
+
+
+A demonstration of the app: 
+
+
+
+To access the bot via telegram, click on the link below:
+
 http://t.me/leonam_RossmanBot
 
-A demonstration of the app:
