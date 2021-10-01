@@ -145,3 +145,5 @@ To access the bot via telegram, click on the link below:
 
 http://t.me/leonam_RossmanBot
 
+
+Notice that the bot might be idle most of the time, so be patient on your request (it should not take more than 1 minute to have a response).
