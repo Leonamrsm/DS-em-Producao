@@ -139,7 +139,7 @@ The following scheme represents all these files.
 
 A demonstration of the app: 
 
-![](img/rossmann.gif)
+![](img/rossmann_bot.gif)
 
 To access the bot via telegram, click on the link below:
 
