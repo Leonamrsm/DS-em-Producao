@@ -120,25 +120,22 @@ By adding the sales forecasts for all stores for the next 6 weeks, the following
 |worst scenarion| 286,746,880.00|
 |best scenario  | 287,609,874.99|
 
-## Conclusions
+### Machine Learning Performance
 
-The final model performed satisfactorily enough to be deployed to production. Notice that the deployment scripts are included in the last section of the notebook file, but were employed as in the standalone folders (see inside 'deployment'), which were pushed to a cloud storage (in this case, Heroku).
 
-The predictions can be conveniently accessed through a Telegram bot just by messaging the number of desired store (that is, between 1 and 1115), one at a time, as in the following preview.
+![](img/overall_performance.png)
 
-<img src="deployment_bot_screenshot.jpg" width="400"/>
+In the end, the model had an average percentage error of 11%. If 11% error is not acceptable, it is possible to improve it; following the CRISP methodology, if a new round is needed, it may be considered to train stores individually or even a smaller group of them, for example. Another possibility is to perform fine tuning for more iterations. And finally, other models could be used such as recurrent neural networks, such as LSTM.
 
-Notice that some of them are not available in the production dataset. Also, the bot might be idle most of the time, so be patient on your request (it should not take more than 1 minute to have a response).
+## Model in production
 
-### Accessing the bot
+The model was finally put into production and operated via a Telegram chatbot. For this, in addition to the final trained model, a class in python was created with the entire data processing pipeline, an API handler and an application to manage the messages. All files were hosted on Heroku (https://www.heroku.com/); the production data was also stored in its cloud.
 
-It is very straightforward, just look for @rossmann_sales_forecast_bot on Telegram or click the button below:
+The following scheme represents all these files.
 
-[<img alt="Telegram" src="https://img.shields.io/badge/Telegram-2CA5E0?style=for-the-badge&logo=telegram&logoColor=white"/>](https://t.me/rossmann_sales_forecast_bot)
 
-## *Note on visualization*
+![](img/app_scheme.png)
 
-A better reading of the main notebook might be achieved by enabling the following [Jupyter Notebook Extensions](https://github.com/ipython-contrib/jupyter_contrib_nbextensions):
-- Collapsible Headings;
-- Hide input;
-- Split Cells Notebook.
+http://t.me/leonam_RossmanBot
+
+A demonstration of the app:
