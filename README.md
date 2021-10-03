@@ -49,7 +49,7 @@ Eleven hypotheses were validated in the exploratory data analysis. Of these, the
 
 - **Hypothesis 3:** stores should sell less during school holidays.
 - 
-   ***fALSE:*** in average, Stores sell more on school holidays.
+   ***False:*** in average, Stores sell more on school holidays.
 
 ![](img/H12.png)
 
