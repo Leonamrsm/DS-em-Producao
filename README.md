@@ -12,6 +12,11 @@ Store managers were tasked with predicting their daily sales for up to six weeks
 
 The [database](https://www.kaggle.com/c/rossmann-store-sales) spans around 2.5 years in time (between 2013 and 2015) and 1115 stores in total.
 
+## Business Assumptions
+- The days when stores were closed were removed from the analysis.
+- Only stores with sales values bigger than 0 were considered.
+- For stores which did not have Competition Distance information, it was considered that the distance should be the longest distance observed in the data set.
+
 ## Solution Strategy
 
 The resolution of the challenge was carried out following the CRISP (CRoss-Industry Standard Process for data mining) methodology, which is a cyclical approach that streamlines the delivery of value.
