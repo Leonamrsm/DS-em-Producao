@@ -35,8 +35,6 @@ In order to solve this challenge, the work went along the following steps:
 8. **Hyperparameter Fine Tuning:** search for the best values for each of the parameters of the best performing model(s) selected from the previous step.
 9. **Translation and Interpretation of the Model Performance:** conversion of the performance metrics of the Machine Learning model to a more tangible business result.
 10. **Deployment of Model to Production:** publication of the model in a cloud environment so that the interested people can access its results to improve business decisions.
-11. **Telegram Bot**: The goal of this step is to create a bot on the telegram app, that make possible to consult the forecast at any time.
-## Top 3 Insights From Exploratory Data Analysis
 
 Eleven hypotheses were validated in the exploratory data analysis. Of these, the 3 most relevant hypotheses were:
 
