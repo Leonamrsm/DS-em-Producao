@@ -8,9 +8,31 @@
 
 Rossmann is one of the largest drug store chains in Europe with around 56,200 employees and more than 4000 stores.[1](https://www.retail-index.com/sectors/personalcareretailersineurope.aspx) In 2019 Rossmann had more than €10 billion turnover in Germany, Poland, Hungary, the Czech Republic, Turkey, Albania, Kosovo and Spain. 
 
-Store managers were tasked with predicting their daily sales for up to six weeks in advance. It is believed that sales are influenced by many factors, including promotions, competition, school and state holidays, seasonality, and locality. This task was assigned to the Data Science team of the whole chain, who must model the historical database in order to generate the desired forecasting. 
+Store managers were tasked with predicting their daily sales for up to six weeks in advance, in order to define a budget for stores renovation. It is believed that sales are influenced by many factors, including promotions, competition, school and state holidays, seasonality, and locality. This task was assigned to the Data Science team of the whole chain, who must model the historical database in order to generate the desired forecasting. 
 
 The [database](https://www.kaggle.com/c/rossmann-store-sales) spans around 2.5 years in time (between 2013 and 2015) and 1115 stores in total.
+
+## Attribute List
+- Id - an Id that represents a (Store, Date) duple within the test set
+- Store - a unique Id for each store
+- Sales - the turnover for any given day (this is what you are predicting)
+- Customers - the number of customers on a given day
+- Open - an indicator for whether the store was open: 0 = closed, 1 = open
+- StateHoliday - indicates a state holiday. Normally all stores, with few exceptions, are closed on state holidays. Note that all schools are closed on public holidays and weekends. a = public holiday, b = Easter holiday, c = Christmas, 0 = None
+- SchoolHoliday - indicates if the (Store, Date) was affected by the closure of public schools
+- StoreType - differentiates between 4 different store models: a, b, c, d
+- Assortment - describes an assortment level: a = basic, b = extra, c = extended
+- CompetitionDistance - distance in meters to the nearest competitor store
+- CompetitionOpenSince[Month/Year] - gives the approximate year and month of the time the nearest competitor was opened
+- Promo - indicates whether a store is running a promo on that day
+- Promo2 - Promo2 is a continuing and consecutive promotion for some stores: 0 = store is not participating, 1 = store is participating
+- Promo2Since[Year/Week] - describes the year and calendar week when the store started participating in Promo2
+- PromoInterval - describes the consecutive intervals Promo2 is started, naming the months the promotion is started anew. E.g. "Feb,May,Aug,Nov" means each round starts in February, May, August, November of any given year for that store
+
+## Business Assumptions
+- The days when stores were closed were removed from the analysis.
+- Only stores with sales values bigger than 0 were considered.
+- For stores which did not have Competition Distance information, it was considered that the distance should be the longest distance observed in the data set.
 
 ## Solution Strategy
 
@@ -30,8 +52,6 @@ In order to solve this challenge, the work went along the following steps:
 8. **Hyperparameter Fine Tuning:** search for the best values for each of the parameters of the best performing model(s) selected from the previous step.
 9. **Translation and Interpretation of the Model Performance:** conversion of the performance metrics of the Machine Learning model to a more tangible business result.
 10. **Deployment of Model to Production:** publication of the model in a cloud environment so that the interested people can access its results to improve business decisions.
-
-## Top 3 Insights From Exploratory Data Analysis
 
 Eleven hypotheses were validated in the exploratory data analysis. Of these, the 3 most relevant hypotheses were:
 
